@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Live Character Counter</title>
+	<!-- Bootstrap CSS -->
+	<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css
+" rel="stylesheet">
+	<!-- Alpine.js -->
+	<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+	        defer></script>
+</head>
+<body class="bg-light" x-data="{text:''}">
+<div class="container py-5">
+	<h1 class="text-center mb-4">Live Character Counter</h1>
+	<div class="card p-4">
+		<label for="messageInput" class="form-label">Typ een bericht:</label>
+		<textarea id="messageInput"
+		          class="form-control"
+		          maxlength="100"
+		          placeholder="Typ hier..."
+		          x-model="text"
+		></textarea>
+		<p class="mt-2 text-muted">Karakters: <span x-text="text.length">[Aantal Karakters]</span>/100</p>
+	</div>
+</div>
+</body>
+</html>
